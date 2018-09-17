@@ -12,6 +12,6 @@ return [
      * For example, users/ belong if having whoops.blade.php, it will return it firstly, otherwise aborting 404 page.
      * Or you can customize file name whoops -> someone.
      */
-    'default' => 'whoops'
+    'whoops' => 'whoops'
 
 ];

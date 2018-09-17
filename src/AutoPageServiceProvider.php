@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class AutoPageServiceProvider extends ServiceProvider
 {
+    protected $defer = true;
     /**
      * Bootstrap services.
      *

@@ -18,7 +18,7 @@ class PageController extends Controller
     public function page($slug, $one = null, $two = null, $three = null, $four = null, $five = null)
     {
         $prefix = config('auto-page.prefix') ?? 'pages';
-        $default = config('auto-page.default') ?? 'whoops';
+        $default = config('auto-page.whoops') ?? 'whoops';
 
         $args = implode('', array_map(function($arg) {
             return ! empty($arg) ? '.' . $arg : '';
