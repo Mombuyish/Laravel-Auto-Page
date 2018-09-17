@@ -25,16 +25,19 @@ class PageController extends Controller
         }, [$one, $two, $three, $four, $five]));
 
         $combine = $prefix . '.' . $slug;
-        $whoops_page = (empty($args)) ? pathinfo($combine, PATHINFO_FILENAME) . '.' . $default :
+        $whoops_page = empty($args) ? pathinfo($combine, PATHINFO_FILENAME) . '.' . $default :
             $combine . pathinfo($args, PATHINFO_FILENAME) . '.' . $default;
 
-        if (! view()->exists($whoops_page) && ! view()->exists($combine)) {
-            abort(404);
+        $page = $combine . $args;
+
+        if (view()->exists($page)) {
+            return view($page);
         }
 
-        return view()->first([
-            $combine . $args,
-            $whoops_page,
-        ]);
+        if (view()->exists($whoops_page)) {
+            return view($whoops_page);
+        }
+
+        abort(404);
     }
 }
