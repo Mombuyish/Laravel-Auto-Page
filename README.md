@@ -1,5 +1,6 @@
+<p align="center"><img src="https://i.imgur.com/SO6h4xb.png"></p>
 
-This package will help you super faster to create page without set route and auto generate specific route.
+> This package will help you super faster to create page without set route and auto generate specific route.
 
 ## Installation
 ``` bash
@@ -27,6 +28,8 @@ For example, you want to make `http://localhost/hello` you need to `web.php` and
 Try to visit `http://localhost/hello` and will see `Hello, world` it’s pretty amazing, right?
 
 Supported 1 slug(required) and 5 options uri, so you can do: `resources/views/hello/a/b/c/d/e`, and visit `http://localhost/hello/a/b/c/d/e`
+
+![](https://i.imgur.com/BA6XFjd.png)
 
 ## Optional
 Sometimes, you need to add the customize whoops page for situation.
