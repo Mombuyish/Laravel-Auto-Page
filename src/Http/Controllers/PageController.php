@@ -28,7 +28,7 @@ class PageController extends Controller
         $whoops_page = (empty($args)) ? pathinfo($combine, PATHINFO_FILENAME) . '.' . $default :
             $combine . pathinfo($args, PATHINFO_FILENAME) . '.' . $default;
 
-        if (! view()->exists($whoops_page)) {
+        if (! view()->exists($whoops_page) && ! view()->exists($combine)) {
             abort(404);
         }
 

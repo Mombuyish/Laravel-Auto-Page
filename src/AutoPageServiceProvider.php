@@ -2,11 +2,10 @@
 
 namespace Yish\AutoPage;
 
-use Illuminate\Support\ServiceProvider;
+use App\Providers\RouteServiceProvider;
 
-class AutoPageServiceProvider extends ServiceProvider
+class AutoPageServiceProvider extends RouteServiceProvider
 {
-    protected $defer = true;
     /**
      * Bootstrap services.
      *
@@ -14,18 +13,17 @@ class AutoPageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        parent::boot();
+
         $this->publishes([
             __DIR__ . '/config/auto-page.php' => config_path('auto-page.php'),
         ], 'config');
     }
 
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
+    public function map()
     {
+        parent::map();
+
         $this->loadRoutesFrom(__DIR__ . '/routes/pages.php');
     }
 }
