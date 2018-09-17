@@ -33,6 +33,6 @@ Supported 1 slug(required) and 5 options uri, so you can do: `resources/views/he
 
 ## Optional
 Sometimes, you need to add the customize whoops page for situation.
-For example, your dictionary is `resources/views/hello` but you need to set whoops for this directory, add `whoops.blade.php` on the same directory layer, if you want to customize specific whoops, you can do the same above, otherwise it will aborting 404 by default.
+For example, your directory is `resources/views/hello` but you need to set whoops for this directory, add `whoops.blade.php` on the same directory layer, if you want to customize specific whoops, you can do the same above, otherwise it will aborting 404 by default.
 
 Enjoy it 🎉
